@@ -60,7 +60,7 @@ function round2(num) {
       var Tc = Tp + (Ri / 1000) * deltaT;
   
       var PDC = 0;
-      PDC = (Ri / Rref) * PDCnom * (1 + (gamma / 100) * (Tc - T0));
+      PDC = "CONSTANTE"*(Ri / Rref) * PDCnom * (1 + (gamma / 100) * (Tc - T0));
       var PAC = (n / 100) * PDC;
       PAC = PAC * (1 - PT / 100);
       sumCF += PAC;
@@ -76,7 +76,7 @@ function round2(num) {
         y: round2(PAC),
       });
     }
-    const CF = sumCF / dataLength / (PDCnom / DC_AC_ratio);
+    const CF = sumCF  / (24*365*PDCnom / DC_AC_ratio);
     console.log(PAC_array)
     return { PAC_array, CF, min, max };
   }
@@ -135,7 +135,7 @@ function round2(num) {
       var Vmp = vmpref * (Voc / vocref);
   
       var PDC = Vmp * Imp;
-      PDC = (PDC * N) / 1000;
+      PDC = "CONSTANTE"*(PDC * N) / 1000;
   
       var PAC = (n / 100) * PDC;
       PAC = PAC * (1 - PT / 100);
@@ -154,7 +154,7 @@ function round2(num) {
     }
   
     const capacity = PDCnom / DC_AC_ratio;
-    const CF = sumCF / dataLength / capacity;
+    const CF = sumCF  / (24*365*capacity);
     return { PAC_array, CF, min, max };
   }
   
@@ -200,7 +200,7 @@ function round2(num) {
       var Tc = Tp + (Ri / 1000) * deltaT;
   
       var PDC = 0;
-      PDC = (Ri / Rref) * PDCnom * (1 + (gamma / 100) * (Tc - T0));
+      PDC = "CONSTANTE"*(Ri / Rref) * PDCnom * (1 + (gamma / 100) * (Tc - T0));
       var PAC = (n / 100) * PDC;
       PAC = PAC * (1 - PT / 100);
       sumCF += PAC;
@@ -216,7 +216,7 @@ function round2(num) {
         y: round2(PAC),
       });
     }
-    const CF = sumCF / dataLength / (PDCnom / DC_AC_ratio);
+    const CF = sumCF  / (24*365*PDCnom / DC_AC_ratio);
     return { PAC_array, CF, min, max };
   }
   
@@ -272,7 +272,7 @@ function round2(num) {
       var Vmp = vmpref * (Voc / vocref);
   
       var PDC = Vmp * Imp;
-      PDC = (PDC * N) / 1000;
+      PDC = "CONSTANTE"*(PDC * N) / 1000;
   
       var PAC = (n / 100) * PDC;
       PAC = PAC * (1 - PT / 100);
@@ -291,7 +291,7 @@ function round2(num) {
     }
   
     const capacity = PDCnom / DC_AC_ratio;
-    const CF = sumCF / dataLength / capacity;
+    const CF = sumCF / (24*365*capacity);
     return { PAC_array, CF, min, max };
   }
   
