@@ -88,7 +88,7 @@
   "iscTemperatureCoefficientDescription": "Coeficiente de temperatura para la corriente de corto circuito, valor encontrado en la hoja de datos del panel",
   "isolated": "Aislado",
 
-  "kwPerDay": "kW/día",
+  "kwPerDay": "kWh/día",
 
   "latitude": "Latitud",
   "longitude": "Longitud",

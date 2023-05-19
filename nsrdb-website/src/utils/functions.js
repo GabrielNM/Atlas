@@ -60,7 +60,7 @@ function round2(num) {
       var Tc = Tp + (Ri / 1000) * deltaT;
   
       var PDC = 0;
-      PDC = "CONSTANTE"*(Ri / Rref) * PDCnom * (1 + (gamma / 100) * (Tc - T0));
+      PDC = 24*(Ri / Rref) * PDCnom * (1 + (gamma / 100) * (Tc - T0));
       var PAC = (n / 100) * PDC;
       PAC = PAC * (1 - PT / 100);
       sumCF += PAC;
@@ -135,7 +135,7 @@ function round2(num) {
       var Vmp = vmpref * (Voc / vocref);
   
       var PDC = Vmp * Imp;
-      PDC = "CONSTANTE"*(PDC * N) / 1000;
+      PDC = 24*(PDC * N) / 1000;
   
       var PAC = (n / 100) * PDC;
       PAC = PAC * (1 - PT / 100);
@@ -200,7 +200,7 @@ function round2(num) {
       var Tc = Tp + (Ri / 1000) * deltaT;
   
       var PDC = 0;
-      PDC = "CONSTANTE"*(Ri / Rref) * PDCnom * (1 + (gamma / 100) * (Tc - T0));
+      PDC = 10*(Ri / Rref) * PDCnom * (1 + (gamma / 100) * (Tc - T0));
       var PAC = (n / 100) * PDC;
       PAC = PAC * (1 - PT / 100);
       sumCF += PAC;
@@ -272,7 +272,7 @@ function round2(num) {
       var Vmp = vmpref * (Voc / vocref);
   
       var PDC = Vmp * Imp;
-      PDC = "CONSTANTE"*(PDC * N) / 1000;
+      PDC = 10*(PDC * N) / 1000;
   
       var PAC = (n / 100) * PDC;
       PAC = PAC * (1 - PT / 100);
